@@ -1,0 +1,59 @@
+﻿@model IEnumerable<dotNetBlainsBoredClient.Models.ActivityModel>
+
+@{
+    ViewData["Title"] = "Random Fun Thing";
+}
+
+<h1>Random Fun Thing!</h1>
+
+<a asp-area="" asp-controller="Activity" asp-action="Index" class="btn btn-primary">Go!</a>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.activity)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.accessibility)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.type)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.participants)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.price)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.key)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.activity)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.accessibility)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.type)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.participants)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.price)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.key)
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
